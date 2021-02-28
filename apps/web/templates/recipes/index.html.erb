@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Recipes</h2>
+
+    <% recipes.each do |recipe| %>
+      <section>
+      <div class=recipe>
+      <p><%= recipe.title %></p>
+      <img src="<%= recipe.image %>" alt="<%= recipe.title %>"/>
+      <p>
+      <button><a href="/recipes/<%= recipe.id %>">View more</a></button>
+      </p>
+      </div>
+      </section>
+      <br></br>
+    <% end %>
+  </body>
+</html>
