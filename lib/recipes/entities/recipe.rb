@@ -13,7 +13,6 @@ class Recipe
     @image = get_safely(external_recipe, :photo)&.url
     @tags = get_safely(external_recipe, :tags)&.map { |tag| tag.name }
     @chef_name = get_safely(external_recipe, :chef)&.name
-    format_image
   end
 
   private
@@ -26,9 +25,5 @@ class Recipe
      if external_recipe.content_type.id != 'recipe'
        raise ArgumentError.new('content_type must be recipe')
      end
-  end
-
-  def format_image
-    @image = "https:#{@image}" if @image&.start_with?('//')
   end
 end

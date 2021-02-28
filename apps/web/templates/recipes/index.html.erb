@@ -5,13 +5,13 @@
 
     <% recipes.each do |recipe| %>
       <section>
-      <div class=recipe>
-      <p><%= recipe.title %></p>
-      <img src="<%= recipe.image %>" alt="<%= recipe.title %>"/>
-      <p>
-      <button><a href="/recipes/<%= recipe.id %>">View more</a></button>
-      </p>
-      </div>
+        <div class=recipe>
+          <p><%= recipe.title %></p>
+          <img src="<%= recipe.image %>" alt="<%= recipe.title %>"/>
+          <p>
+            <button><a href="/recipes/<%= recipe.id %>">View More</a></button>
+          </p>
+        </div>
       </section>
       <br></br>
     <% end %>

@@ -20,7 +20,8 @@ module Web
       #
       load_paths << [
         'controllers',
-        'views'
+        'views',
+        'presenters'
       ]
 
       # Handle exceptions with HTTP statuses (true) or don't catch them (false).
@@ -264,7 +265,7 @@ module Web
     # DEVELOPMENT
     #
     configure :development do
-      handle_exceptions true
+      handle_exceptions false
     end
 
     ##

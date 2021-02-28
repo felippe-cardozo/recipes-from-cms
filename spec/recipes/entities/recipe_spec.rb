@@ -21,7 +21,7 @@ RSpec.describe Recipe do
 
         expect(recipe.title).to eq('recipe title')
         expect(recipe.description).to eq('recipe description')
-        expect(recipe.image).to eq('https://image.jpg')
+        expect(recipe.image).to eq('//image.jpg')
         expect(recipe.tags).to eq(['vegan'])
         expect(recipe.chef_name).to eq('Paola Carosella')
         expect(recipe.id).to eq('fake_id')

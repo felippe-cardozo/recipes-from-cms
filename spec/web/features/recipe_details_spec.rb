@@ -26,7 +26,7 @@ RSpec.describe 'recipe details page' do
         'White Cheddar Grilled Cheese with Cherry Preserves & Basil'
       )
 
-      expect(page.find('p.description')).to have_content(
+      expect(page.find('div.description')).to have_content(
         'Use delicious cheese and good quality bread'
       )
     end

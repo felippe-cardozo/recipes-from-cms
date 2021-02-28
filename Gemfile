@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'contentful'
 gem 'hanami', '~> 1.3'
 gem 'rake'
+gem 'redcarpet'
 
 group :development do
   # Code reloading

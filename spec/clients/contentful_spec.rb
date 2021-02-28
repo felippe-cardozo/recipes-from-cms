@@ -15,7 +15,7 @@ RSpec.describe Clients::Contentful do
 
   describe '.entries' do
     it 'returns a list of entries from the external service' do
-      stub_request(:get, contentful_base_url + '/entries?content_type=recipe')
+      stub_request(:get, contentful_base_url + '/entries?content_type=recipe&limit=100&skip=0')
         .to_return(status: 200, body: contentful_recipes_response)
 
       entries = described_class.entries('recipe')
