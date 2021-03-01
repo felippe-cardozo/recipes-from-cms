@@ -11,11 +11,7 @@ module Clients
       )
     end
 
-    def self.entries(content_type, skip: 0, limit: 100)
-      client.entries(content_type: content_type, skip: skip, limit: limit)
-    end
-
-    def self.list(content_type:, skip: 0, limit: 100)
+    def self.entries(content_type, skip:, limit:)
       client.entries(content_type: content_type, skip: skip, limit: limit)
     end
 

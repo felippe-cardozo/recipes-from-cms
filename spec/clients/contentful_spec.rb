@@ -18,7 +18,7 @@ RSpec.describe Clients::Contentful do
       stub_request(:get, contentful_base_url + '/entries?content_type=recipe&limit=100&skip=0')
         .to_return(status: 200, body: contentful_recipes_response)
 
-      entries = described_class.entries('recipe')
+      entries = described_class.entries('recipe', skip: 0, limit: 100)
 
       expect(entries.count).to eq(1)
       expect(entries.first.id).to eq(first_entry_id)

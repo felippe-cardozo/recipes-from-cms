@@ -15,5 +15,11 @@
       </section>
       <br></br>
     <% end %>
+    <% if previous_page_link %>
+      <button class="previous_page_button"><a href=<%= previous_page_link %>>Previous Page</a></button>
+    <% end %>
+    <% if next_page_link %>
+      <button class="next_page_button"><a href=<%= next_page_link %>>Next Page</a></button>
+    <% end %>
   </body>
 </html>
