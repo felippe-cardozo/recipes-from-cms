@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html>
-  <body>
-    <h2>Recipes</h2>
 
+<div class="container">
+  <div class="row">
+    <h2>Recipes</h2>
+  </div>
+  <div class="row">
     <% recipes.each do |recipe| %>
-      <section>
-        <div class=recipe>
-          <p><%= recipe.title %></p>
-          <img src="<%= recipe.image %>" alt="<%= recipe.title %>"/>
-          <p>
-            <button><a href="/recipes/<%= recipe.id %>">View More</a></button>
-          </p>
+      <div class="col-sm recipe">
+        <%= recipe.title %>
+        <img src="<%= recipe.image %>" alt="<%= recipe.title %>"/>
+        <br></br>
+        <div class="btn-group">
+          <button class="btn btn-outline-primary details_button"><a style="text-decoration:none" href=<%= recipe.details_link %> >View More</a></button>
         </div>
-      </section>
-      <br></br>
+        <br></br>
+      </div>
     <% end %>
-    <% if previous_page_link %>
-      <button class="previous_page_button"><a href=<%= previous_page_link %>>Previous Page</a></button>
-    <% end %>
-    <% if next_page_link %>
-      <button class="next_page_button"><a href=<%= next_page_link %>>Next Page</a></button>
-    <% end %>
-  </body>
-</html>
+  </div>
+  <% if previous_page_link %>
+    <button class="btn btn-outline-primary previous_page_button"><a href=<%= previous_page_link %> style="text-decoration:none">Previous Page</a></button>
+  <% end %>
+  <% if next_page_link %>
+    <button class="btn btn-outline-primary next_page_button"><a href=<%= next_page_link %> style="text-decoration:none">Next Page</a></button>
+  <% end %>
+</div>

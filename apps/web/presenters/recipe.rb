@@ -3,7 +3,7 @@ module Web
     class Recipe
       include Hanami::Helpers::EscapeHelper
 
-      attr_reader :title, :description, :image, :tags, :chef_name, :id
+      attr_reader :title, :description, :image, :tags, :chef_name, :details_link
 
       def initialize(object)
         @title = object.title
@@ -11,7 +11,7 @@ module Web
         @image = formated_image(object.image)
         @tags = object.tags
         @chef_name = object.chef_name
-        @id = object.id
+        @details_link = "/recipes/#{object.id}"
       end
 
       private

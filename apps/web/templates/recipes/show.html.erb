@@ -1,31 +1,25 @@
 <!DOCTYPE html>
-<html>
-  <body>
-    <section>
-      <div class="row" style="box-sizing: border-box">
-        <div class="col-2" style="width: 40%; align: left">
-          <h2 class="title"><%= recipe.title %></h2>
-
-          <% if recipe.chef_name %>
-            <h4><%= recipe.chef_name %></h4>
-          <% end %>
-
-          <img class="img-fluid" src="<%= recipe.image %>" alt="<%= recipe.title %>"/>
-
-          <div class="description"> <%= recipe.description %> </div>
-
-          <% if recipe.tags %>
-            Tags:
-            <ul>
-              <li>
-                <% recipe.tags.each do |tag| %>
-                  <span> <%= tag %></span>
-                <% end %>
-              </li>
-            </ul>
-          <% end %>
-        </div>
-      </div>
-    </section>
-  </body>
-</html>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h2 class="title"><%= recipe.title %></h2>
+    <% if recipe.chef_name %>
+        <h4><%= recipe.chef_name %></h4>
+    <% end %>
+    <br></br>
+      <img class="img-fluid" src="<%= recipe.image %>" alt="<%= recipe.title %>"/>
+      <br></br>
+      <div class="description"> <%= recipe.description %> </div>
+      <br></br>
+    <% if recipe.tags %>
+      <h4> Tags: </h4>
+        <ul>
+          <li>
+            <% recipe.tags.each do |tag| %>
+              <span> <%= tag %></span>
+            <% end %>
+          </li>
+        </ul>
+    <% end %>
+  </div>
+</div>

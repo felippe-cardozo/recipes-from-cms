@@ -19,7 +19,7 @@ RSpec.describe Web::Presenters::Recipe do
       expect(presentation_recipe.chef_name).to eq('chef name')
       expect(presentation_recipe.tags).to eq(['vegan'])
       expect(presentation_recipe.image).to eq('https://link.com')
-      expect(presentation_recipe.id).to eq('fake_id')
+      expect(presentation_recipe.details_link).to eq('/recipes/fake_id')
     end
   end
 end
